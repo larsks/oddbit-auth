@@ -10,3 +10,9 @@ resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
+  - config-cronjob.yaml
+
+configMapGenerator:
+  - name: keycloak-realm-config
+    files:
+      - config/caara-races.yaml
