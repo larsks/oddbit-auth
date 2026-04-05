@@ -9,6 +9,7 @@ labels:
 resources:
   - keycloak/
   - postgres/
+  - maddy
 
 secretGenerator:
   - envs:
