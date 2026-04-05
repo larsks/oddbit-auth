@@ -44,6 +44,8 @@ clients:
     webOrigins:
       - https://caara-races-dev.oddbit.com
     protocol: openid-connect
+    attributes:
+      post.logout.redirect.uris: "https://caara-races-dev.oddbit.com/*"
     protocolMappers:
       - name: group-membership
         protocol: openid-connect
