@@ -6,6 +6,7 @@ rememberMe: true
 resetPasswordAllowed: true
 loginWithEmailAllowed: true
 registrationAllowed: true
+actionTokenGeneratedByUserLifespan: 900
 roles:
   client:
     caara-races-website:
