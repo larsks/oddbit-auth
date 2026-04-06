@@ -145,3 +145,45 @@ smtpServer:
   fromDisplayName: Authentication Administrator
   ssl: "false"
   starttls: "false"
+identityProviders:
+  - alias: github
+    displayName: Github
+    providerId: github
+    enabled: true
+    trustEmail: true
+    storeToken: false
+    addReadTokenRoleOnCreate: false
+    authenticateByDefault: false
+    linkOnly: false
+    hideOnLogin: false
+    config:
+      acceptsPromptNoneForwardFromClient: "false"
+      clientId: $(env:GITHUB_OAUTH_CLIENT_ID)
+      disableUserInfo: "false"
+      filteredByClaim: "false"
+      syncMode: LEGACY
+      clientSecret: "$(GITHUB_OAUTH_CLIENT_SECRET)"
+      caseSensitiveOriginalUsername: "false"
+      defaultScope: openid profile email
+      guiOrder: "20"
+  - alias: google
+    displayName: Google
+    providerId: google
+    enabled: true
+    updateProfileFirstLoginMode: "on"
+    trustEmail: true
+    storeToken: false
+    addReadTokenRoleOnCreate: false
+    authenticateByDefault: false
+    linkOnly: false
+    hideOnLogin: false
+    config:
+      acceptsPromptNoneForwardFromClient: "false"
+      clientId: $(env:GOOGLE_OAUTH_CLIENT_ID)
+      disableUserInfo: "false"
+      filteredByClaim: "false"
+      syncMode: LEGACY
+      clientSecret: "$(env:GOOGLE_OAUTH_CLIENT_SECRET)"
+      caseSensitiveOriginalUsername: "false"
+      defaultScope: openid profile email
+      guiOrder: "10"
