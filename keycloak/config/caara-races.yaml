@@ -158,11 +158,11 @@ identityProviders:
     hideOnLogin: false
     config:
       acceptsPromptNoneForwardFromClient: "false"
-      clientId: $(env:GITHUB_OAUTH_CLIENT_ID)
+      clientId: $(env:CAARA_GITHUB_OAUTH_CLIENT_ID)
       disableUserInfo: "false"
       filteredByClaim: "false"
       syncMode: LEGACY
-      clientSecret: "$(GITHUB_OAUTH_CLIENT_SECRET)"
+      clientSecret: "$(env:CAARA_GITHUB_OAUTH_CLIENT_SECRET)"
       caseSensitiveOriginalUsername: "false"
       defaultScope: openid profile email
       guiOrder: "20"
@@ -179,11 +179,11 @@ identityProviders:
     hideOnLogin: false
     config:
       acceptsPromptNoneForwardFromClient: "false"
-      clientId: $(env:GOOGLE_OAUTH_CLIENT_ID)
+      clientId: $(env:CAARA_GOOGLE_OAUTH_CLIENT_ID)
       disableUserInfo: "false"
       filteredByClaim: "false"
       syncMode: LEGACY
-      clientSecret: "$(env:GOOGLE_OAUTH_CLIENT_SECRET)"
+      clientSecret: "$(env:CAARA_GOOGLE_OAUTH_CLIENT_SECRET)"
       caseSensitiveOriginalUsername: "false"
       defaultScope: openid profile email
       guiOrder: "10"
