@@ -15,4 +15,6 @@ resources:
 configMapGenerator:
   - name: keycloak-realm-config
     files:
+      - config/keycloak.yaml
       - config/caara-races.yaml
+      - config/oddbit.yaml
