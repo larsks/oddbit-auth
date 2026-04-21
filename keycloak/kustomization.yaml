@@ -10,7 +10,7 @@ resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
-  - config-cronjob.yaml
+  - cronjobs/configure-keycloak.yaml
 
 configMapGenerator:
   - name: keycloak-realm-config
