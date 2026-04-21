@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: keycloak-config
+  name: configure-keycloak
 spec:
   schedule: "0 0 * * *"
   suspend: true
@@ -12,6 +12,8 @@ spec:
           containers:
             - name: keycloak-config-cli
               image: adorsys/keycloak-config-cli:latest
+              args:
+                - --import.var-substitution.enabled=true
               env:
                 - name: KEYCLOAK_URL
                   value: "http://keycloak:8080"
@@ -31,6 +33,9 @@ spec:
                   value: "120s"
                 - name: IMPORT_FILES_LOCATIONS
                   value: "/config/*"
+              envFrom:
+                - secretRef:
+                    name: keycloak-config-env
               volumeMounts:
                 - name: config
                   mountPath: /config
