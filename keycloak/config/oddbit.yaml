@@ -32,7 +32,8 @@ defaultOptionalClientScopes:
   - groups
 groups:
   - name: vault-admin
-    path: /vault-admin
+  - name: vault-caara-races
+  - name: vault-oddbit
 clients:
   - clientId: oddbit-vault
     rootUrl: https://vault.oddbit.com
